@@ -1,7 +1,7 @@
 {
-  "name": "node-typescript-boilerplate",
+  "name": "uniswap_trading_bot",
   "version": "0.0.0",
-  "description": "Minimalistic boilerplate to quick-start Node.js development in TypeScript.",
+  "description": "uniswap v3 trading bot",
   "type": "module",
   "engines": {
     "node": ">= 20.9 < 21"
