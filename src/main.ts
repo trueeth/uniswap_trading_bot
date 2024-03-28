@@ -1,3 +1,5 @@
+import  { createTrade, executeTrade } from "./libs/trading";
+
 /**
  * Some predefined delay values (in milliseconds).
  */
@@ -18,7 +20,7 @@ function delayedHello(
   name: string,
   delay: number = Delays.Medium,
 ): Promise<string> {
-  return new Promise((resolve: (value?: string) => void) =>
+  return new Promise((resolve: (value: string) => void) =>
     setTimeout(() => resolve(`Hello, ${name}`), delay),
   );
 }
@@ -32,3 +34,13 @@ export async function greeter(name: any) { // eslint-disable-line @typescript-es
   // The name parameter should be of type string. Any is used only to trigger the rule.
   return await delayedHello(name, Delays.Long);
 }
+
+
+async function main() {
+  const trade = await createTrade();
+  console.log('create trade parameter success')
+  const result = await executeTrade(trade);
+  console.log(result)
+}
+
+main()
